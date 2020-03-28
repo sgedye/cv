@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import Menu from "./Menu"
 import Hero from "./Hero"
 import Education from "./Education"
@@ -9,8 +10,13 @@ import Contact from "./Contact"
 import '../Style/App.css'
 
 function App() {
+  const [title, setTitle] = useState("My Menu")
+
+    // Add in Scroll Magic to update the Menu Title 
+
   return (
     <React.Fragment>
+      <Menu title={title} />
       <Hero />
       <Education />
       <Abilities />

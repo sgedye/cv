@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const AbilitiesPage = styled.section`
+  min-height: calc(100vh - 80px);
+`
 
 export default function Abilities() {
   return (
-    <div>
-      <h2>Abilities</h2>
-    </div>
+    <AbilitiesPage id="abilities-page">
+      <h2>Abilities Page</h2>
+    </AbilitiesPage>
   )
 }

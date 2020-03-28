@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Menu from './Menu'
-
+// import educationData from '../inventory'
 import curtin from '../imgs/curtin.png'
 import fcc from '../imgs/fcc-small.png'
 
 const EducationPage = styled.section`
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   max-width: 100vw;
   margin: 0 auto;
 `
@@ -44,7 +43,7 @@ const Description = styled.div`
 const educationData = [
   {
     id: "bEng",
-    imgAddr: "../imgs/curtin.png",
+    imgAddr: {curtin},
     title: "Bachelor of Engineering",
     subTitle: "Software Engineering - Honours",
     school: "Curtin University"
@@ -72,8 +71,9 @@ const educationData = [
   }
 ]
 
+
 export default function Education() {
-  
+
   const educationList = educationData.map(item => {
     const alt = `${item.school} logo`
     return (
@@ -81,26 +81,14 @@ export default function Education() {
         <img src={curtin} alt={alt} />
         <Description>
           <div>
-            <div>
               <h2 className="title">{item.title}</h2>
-            </div>
-            <div>
               <h3 className="subTitle">{item.subTitle}</h3>
-            </div>
-            <div>
               <h3 className="school">{item.school}</h3>
-            </div>
           </div>
         </Description>
       </EducationItem>
     )
   })
   
-  return (
-    <EducationPage>
-      <Menu />
-      {educationList}
-      <h2>Education</h2>
-    </EducationPage>
-  )
+  return <EducationPage id="education-page" >{educationList}</EducationPage>
 }

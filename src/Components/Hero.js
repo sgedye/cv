@@ -5,7 +5,7 @@ import headshot from '../imgs/me.jpg'
 const HeroPage = styled.section`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   max-width: 100vw;
   background: lightgrey;
 `
@@ -22,7 +22,7 @@ const Title = styled.h1`
 
 export default function Hero() {
   return (
-    <HeroPage>
+    <HeroPage id="hero-page">
       <Img src={headshot} alt="Headshot of Shaun Gedye" />
       <Title>Shaun Gedye</Title>
       <Title>(HERO PAGE)</Title>

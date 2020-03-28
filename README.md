@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## [View CV](https://sgedye.github.io/cv)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
